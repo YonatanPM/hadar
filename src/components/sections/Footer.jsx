@@ -39,7 +39,6 @@ export default function Footer() {
               פרטים חשובים
             </h4>
             <div className="flex flex-col space-y-3 text-sm text-gray-600">
-              <div>🕐 זמינות: 4 ימים בשבוע ראשון-חמישי 8:00-17:00</div>
               <div>📍 אזור רחובות-נס ציונה</div>
               <div>👶 גילאים: 0-4 שנים</div>
             </div>
