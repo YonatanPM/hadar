@@ -41,7 +41,7 @@ export default function About() {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-700">
-              עלי
+              אודות
             </h2>
             <div className="w-20 h-1 bg-amber-400 mx-auto mb-8"></div>
           </div>
