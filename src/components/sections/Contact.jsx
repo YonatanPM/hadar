@@ -62,8 +62,7 @@ export default function Contact() {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-700">
-            בואו ניצור קשר
-          </h2>
+פרטי התקשרות</h2>
           <div className="w-20 h-1 bg-amber-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             אשמח לענות על כל שאלה ולתאם פגישת היכרות ללא התחייבות
