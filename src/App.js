@@ -20,12 +20,27 @@ export default function Home() {
       // Update active section based on scroll position
       const sections = ["hero", "about", "services", "contact"];
       let currentSection = "hero";
+      const viewportTop = scrollY + 200; // Offset from top of viewport
 
+      // Find the section that is currently in view
       for (let i = 0; i < sections.length; i++) {
         const sectionId = sections[i];
         const element = document.getElementById(sectionId);
-        if (element && element.offsetTop <= scrollY + window.innerHeight / 2) {
-          currentSection = sectionId;
+        if (element) {
+          const sectionTop = element.offsetTop;
+          const sectionHeight = element.offsetHeight;
+          const sectionBottom = sectionTop + sectionHeight;
+
+          // Check if viewport top is within this section's bounds
+          if (viewportTop >= sectionTop && viewportTop < sectionBottom) {
+            currentSection = sectionId;
+            break;
+          }
+          // If we haven't reached this section yet, use the previous one
+          if (viewportTop < sectionTop) {
+            currentSection = i > 0 ? sections[i - 1] : sections[0];
+            break;
+          }
         }
       }
       setActiveSection(currentSection);
@@ -61,14 +76,14 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFBF5] text-gray-800" dir="rtl">
+    <div className="min-h-screen bg-[#FFFBF5] text-gray-800 overflow-x-hidden">
       <Header
         activeSection={activeSection}
         isScrolled={isScrolled}
         scrollToSection={scrollToSection}
       />
 
-      <main>
+      <main className="w-full">
         <div className="transition-all duration-[2000ms] ease-out opacity-100 translate-y-0">
           <Hero scrollToSection={scrollToSection} />
         </div>

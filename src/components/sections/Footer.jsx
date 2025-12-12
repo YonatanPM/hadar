@@ -18,61 +18,64 @@ export default function Footer() {
   );
 
   return (
-    <footer className="bg-amber-100 text-gray-700 pt-16 pb-8" dir="rtl">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 items-start text-center sm:text-right">
+    <footer className="bg-amber-100 text-gray-700 pt-12 sm:pt-16 pb-6 sm:pb-8">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[0.9fr_1fr_1fr_1fr] gap-8 sm:gap-12 items-center text-center sm:text-start">
           {/* Image column on the right (first in RTL) */}
           <div className="flex items-center justify-center sm:justify-start">
             <div className="relative">
               <img
                 src="/citrus.png"
                 alt="פריחת ההדרים"
-                className="rounded-2xl w-62 h-62 object-contain"
+                width="250"
+                height="250"
+                className="rounded-2xl object-contain w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64"
               />
               <div className="absolute -inset-2 bg-amber-200/30 rounded-2xl transform rotate-2 -z-10"></div>
             </div>
           </div>
 
           {/* Details */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-gray-800">
+          <div className="space-y-3 sm:space-y-4">
+            <h4 className="text-base sm:text-lg font-semibold text-gray-800">
               פרטים חשובים
             </h4>
-            <div className="flex flex-col space-y-3 text-sm text-gray-600">
-              <div>🕐 זמינות: 4 ימים בשבוע ראשון-חמישי 8:00-17:00</div>
+            <div className="flex flex-col space-y-2 sm:space-y-3 text-sm text-gray-600">
               <div>📍 אזור רחובות-נס ציונה</div>
               <div>👶 גילאים: 0-4 שנים</div>
             </div>
           </div>
 
           {/* Contact */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-gray-800">הישארו בקשר</h4>
+          <div className="space-y-3 sm:space-y-4">
+            <h4 className="text-base sm:text-lg font-semibold text-gray-800">
+              הישארו בקשר
+            </h4>
             <ul className="space-y-2">
               <li>
                 <a
                   href="tel:052-776-7744"
-                  className="flex items-center justify-center sm:justify-start gap-2 text-gray-700 hover:text-amber-600 transition-colors"
+                  className="flex items-center justify-center sm:justify-start gap-2 text-gray-700 hover:text-amber-600 transition-colors text-sm sm:text-base"
                 >
-                  <Phone className="w-4 h-4" aria-hidden="true" />
-                  <span>052-776-7744</span>
+                  <Phone className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                  <span className="break-all">052-776-7744</span>
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:hadarco91@gmail.com"
-                  className="flex items-center justify-center sm:justify-start gap-2 text-gray-700 hover:text-amber-600 transition-colors"
+                  className="flex items-center justify-center sm:justify-start gap-2 text-gray-700 hover:text-amber-600 transition-colors text-sm sm:text-base"
                 >
-                  <Mail className="w-4 h-4" aria-hidden="true" />
-                  <span>hadarco91@gmail.com</span>
+                  <Mail className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                  <span className="break-all">hadarco91@gmail.com</span>
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Social */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-gray-800 md:invisible">
+          <div className="space-y-3 sm:space-y-4">
+            <h4 className="text-base sm:text-lg font-semibold text-gray-800 md:invisible">
               רשתות חברתיות
             </h4>
             <div className="flex justify-center sm:justify-start space-x-4 space-x-reverse pt-2">
@@ -98,8 +101,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-amber-200 mt-12 pt-8 text-center">
-          <p className="text-gray-600 text-sm">
+        <div className="border-t border-amber-200 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
+          <p className="text-gray-600 text-xs sm:text-sm px-4">
             © {new Date().getFullYear()} הדר כהן מעיין - מטפלת פרטית. כל הזכויות
             שמורות.
           </p>

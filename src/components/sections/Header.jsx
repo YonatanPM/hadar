@@ -17,13 +17,13 @@ export default function Header({ activeSection, isScrolled, scrollToSection }) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 p-2 md:p-4`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 p-1 sm:p-2 md:p-4`}
     >
       <div
-        className={`container mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300 ease-in-out flex items-center justify-between h-20 ${
+        className={`container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 transition-all duration-300 ease-in-out flex items-center justify-between ${
           isScrolled
-            ? "bg-amber-100/80 backdrop-blur-lg shadow-xl rounded-full"
-            : "bg-transparent h-24"
+            ? "bg-amber-100/80 backdrop-blur-lg shadow-xl rounded-full h-16 sm:h-20"
+            : "bg-transparent h-20 sm:h-24"
         }`}
       >
         {/* Logo on the right */}
@@ -36,15 +36,19 @@ export default function Header({ activeSection, isScrolled, scrollToSection }) {
             <img
               src="citrus.png"
               alt="לוגו הדר מטפלת"
-              className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full bg-[#FFFBF5] transition-transform transform group-hover:scale-105 "
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain rounded-full bg-[#FFFBF5] transition-transform transform group-hover:scale-105 "
             />
             <div
-              className={`flex flex-col text-right transition-all duration-500 ease-in-out overflow-hidden whitespace-nowrap ${
+              className={`hidden sm:flex flex-col text-start transition-all duration-500 ease-in-out overflow-hidden whitespace-nowrap ${
                 isScrolled ? "max-w-40 opacity-100" : "max-w-0 opacity-0"
               }`}
             >
-              <span className="font-bold text-2xl text-amber-900">הדר</span>
-              <span className="text-sm text-amber-800 -mt-1">מטפלת ומחנכת</span>
+              <span className="font-bold text-xl sm:text-2xl text-amber-900">
+                הדר
+              </span>
+              <span className="text-xs sm:text-sm text-amber-800 -mt-1">
+                מטפלת ומחנכת
+              </span>
             </div>
           </button>
         </div>
@@ -116,14 +120,14 @@ export default function Header({ activeSection, isScrolled, scrollToSection }) {
             : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-2 sm:px-4">
           <div className="bg-amber-50/95 backdrop-blur-lg shadow-lg border border-amber-200/50 rounded-2xl overflow-hidden">
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-3 sm:px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
               {menuItems.map((item, index) => (
                 <button
                   key={item.id}
                   onClick={() => handleMenuClick(item.id)}
-                  className={`block w-full text-right py-3 px-4 rounded-lg font-medium text-lg transition-all duration-300 transform focus:outline-none focus-visible:bg-amber-200/80
+                  className={`block w-full text-start py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg font-medium text-base sm:text-lg transition-all duration-300 transform focus:outline-none focus-visible:bg-amber-200/80
                         text-amber-900 hover:bg-amber-100/70
                         ${activeSection === item.id ? "bg-amber-100/70" : ""}
                         ${

@@ -41,11 +41,14 @@
     <!-- PWA manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="%PUBLIC_URL%/hadar-c-m.jpeg" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playpen+Sans+Hebrew:wght@100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playpen+Sans+Hebrew:wght@100..800&display=optional"
       rel="stylesheet"
     />
 
@@ -53,6 +56,11 @@
     <style>
       body {
         font-family: "Playpen Sans Hebrew", "Fredoka", Arial, sans-serif;
+      }
+      /* Prevent CLS for headings */
+      h1,
+      h2 {
+        font-display: optional;
       }
     </style>
   </head>
