@@ -44,8 +44,13 @@ export default function About() {
                 : "opacity-0 translate-y-12"
             }`}
           >
+<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-700">
               עלי
+=======
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-700">
+              אודות
+>>>>>>> 458d3433d96702ee460ec89b25a46a09fc2cb051
             </h2>
             <div className="w-20 h-1 bg-amber-400 mx-auto mb-6 sm:mb-8"></div>
           </div>
