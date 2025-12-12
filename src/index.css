@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -72,12 +70,19 @@
       scroll-padding-top: 96px;
     }
   }
-  h1 h2 h3 h4 h5 h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-sans;
-    font-family: "Playpen Sans Hebrew", cursive;
+    font-family: "Playpen Sans Hebrew", "Fredoka", Arial, sans-serif;
+    font-display: swap;
   }
   p {
     @apply font-sans;
-    font-family: "Fredoka", sans-serif;
+    font-family: "Fredoka", "Playpen Sans Hebrew", Arial, sans-serif;
+    font-display: swap;
   }
 }
