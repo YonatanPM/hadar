@@ -61,18 +61,11 @@ export default function Contact() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-<<<<<<< HEAD
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-700">
             בואו ניצור קשר
           </h2>
           <div className="w-20 h-1 bg-amber-400 mx-auto mb-6 sm:mb-8"></div>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-=======
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-700">
-פרטי התקשרות</h2>
-          <div className="w-20 h-1 bg-amber-400 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
->>>>>>> 458d3433d96702ee460ec89b25a46a09fc2cb051
             אשמח לענות על כל שאלה ולתאם פגישת היכרות ללא התחייבות
           </p>
         </div>

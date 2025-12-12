@@ -40,11 +40,7 @@ export default function Footer() {
             <h4 className="text-base sm:text-lg font-semibold text-gray-800">
               פרטים חשובים
             </h4>
-<<<<<<< HEAD
             <div className="flex flex-col space-y-2 sm:space-y-3 text-sm text-gray-600">
-=======
-            <div className="flex flex-col space-y-3 text-sm text-gray-600">
->>>>>>> 458d3433d96702ee460ec89b25a46a09fc2cb051
               <div>📍 אזור רחובות-נס ציונה</div>
               <div>👶 גילאים: 0-4 שנים</div>
             </div>
