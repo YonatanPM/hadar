@@ -48,7 +48,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playpen+Sans+Hebrew:wght@100..800&display=optional"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Playpen+Sans+Hebrew:wght@100..800&display=swap"
       rel="stylesheet"
     />
 
@@ -57,10 +57,17 @@
       body {
         font-family: "Playpen Sans Hebrew", "Fredoka", Arial, sans-serif;
       }
-      /* Prevent CLS for headings */
+      /* Prevent FOUT - show text immediately with fallback font */
       h1,
-      h2 {
-        font-display: optional;
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playpen Sans Hebrew", "Fredoka", Arial, sans-serif;
+      }
+      p {
+        font-family: "Fredoka", "Playpen Sans Hebrew", Arial, sans-serif;
       }
     </style>
   </head>
